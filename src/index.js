@@ -1,12 +1,7 @@
 import React from 'react'
 import { createRoot } from 'react-dom';
-import './index.css'
-
-const App = () => {
-  return (
-    <h1>INTERVIEW SCHEDULER</h1>
-  )
-}
+import Application from "./components/Application";
+import "./index.scss";
 
 const root = createRoot(document.getElementById('root'));
-root.render(<App />)
+root.render(<Application />);
