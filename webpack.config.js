@@ -6,12 +6,13 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index-bundle.js',
-    publicPath: '/'
+    // publicPath: '/'
   },
   module: {
     rules: [
       { test: /\.js$/, use: 'babel-loader' },
-      { test: /\.css$/, use: [ 'style-loader', 'css-loader' ]}
+      { test: /\.s[ac]ss$/, use: [ 'style-loader', 'css-loader', 'sass-loader' ] },
+      { test: /\.png$/, type: 'asset/resource' }
     ]
   },
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
@@ -20,7 +21,7 @@ module.exports = {
       template: './public/index.html'
     })
   ],
-  devServer: {
-    historyApiFallback: true
-  }
+  // devServer: {
+  //   historyApiFallback: true
+  // }
 }
