@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve",
-    "build": "NODE_ENV='production' webpack"
+    "build": "NODE_ENV='production' webpack",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "babel": {
     "presets": [
@@ -24,8 +26,17 @@
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
+    "@storybook/addon-actions": "^6.5.6",
+    "@storybook/addon-essentials": "^6.5.6",
+    "@storybook/addon-interactions": "^6.5.6",
+    "@storybook/addon-links": "^6.5.6",
+    "@storybook/builder-webpack5": "^6.5.6",
+    "@storybook/manager-webpack5": "^6.5.6",
+    "@storybook/react": "^6.5.6",
+    "@storybook/testing-library": "^0.0.11",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
